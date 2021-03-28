@@ -1,27 +1,21 @@
 import React from "react";
-import Wrapper from "./components/Wrapper";
+import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Employee from "./components/Employee";
+import Wrapper from "./components/Wrapper";
+import EmployeeCard from "./components/Employee"
 
 function App() {
   return (
+    <Router>
       <div>
         <Navbar />
         <Wrapper>
-          <Employee />
-          <Employee />
-          <Employee />
-          <Employee />
-          <Employee />
-          <Employee />
-          <Employee />
-          <Employee />
-          <Employee />
-          <Employee />
+          <EmployeeCard/>
         </Wrapper>
         <Footer />
       </div>
+    </Router>
   );
 }
 

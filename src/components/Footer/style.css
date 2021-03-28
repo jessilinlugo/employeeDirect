@@ -1,16 +1,15 @@
 .footer {
-    min-height: 100px;
-    background: #8b8b8b;
-    position: relative;
-  }
+  min-height: 100px;
+  background: #8b8b8b;
+  position: relative;
+}
 
-  .footer-style {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 3px;
-  }
-  
+.footer-style {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3px;
+}
