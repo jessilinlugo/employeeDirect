@@ -10,7 +10,7 @@ function App() {
   const [employeeState, setEmployeeState] = useState([]);
 
   useEffect(() => {
-    axios.get("https://randomuser.me/api/?results=25&nat=us")
+    axios.get("https://randomuser.me/api/?results=45&nat=us")
       .then(allUsers => {
         setEmployeeState(allUsers.data.results.map(result => {
           let employeeData = {
@@ -41,7 +41,7 @@ function App() {
     }))
   }
 
-  const refreshPage = (event) => {
+  const refreshPage = () => {
     window.location.reload(false);
   }
 
