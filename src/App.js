@@ -34,18 +34,36 @@ function App() {
     setEmployeeState(sortedEmployees);
   }
 
+  const filterByCity = (event) => {
+    let city = event.target.value.toLowerCase();
+    setEmployeeState(employeeState.filter(employee => {
+      return employee.city.toLowerCase().includes(city);
+    }))
+  }
+
+  const refreshPage = (event) => {
+    window.location.reload(false);
+  }
+
   return (
     <div>
       <Navbar />
       <Wrapper>
         <div className="container mt-4">
-          <div className="row">
+          <div className="row mb-4">
             <div className="col">
               <strong>Search for a Smiley Employee!</strong>
-    </div>
-    <div className="col-4">
-      <button type="button" class="btn btn-success" onClick={(e) => sortByFirstName(e)}>Sort by Employee First Name</button>
-    </div>
+            </div>
+
+            <div className="col-3">
+              <button type="button" class="btn btn-success" onClick={(e) => sortByFirstName(e)}>Sort Employee by First Name</button>
+            </div>
+            <div className="col-3">
+              <input type="text" onChange={(e) => { filterByCity(e) }} className="form-control" placeholder="Filter Employees by City" />
+            </div>
+            <div className="col-3">
+              <button type="button" class="btn btn-secondary" onClick={refreshPage}>Refresh Employees</button>
+            </div>
           </div>
           <table className="table">
             <thead>
