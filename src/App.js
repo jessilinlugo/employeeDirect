@@ -28,7 +28,7 @@ function App() {
   }, [])
 
 
-  const sortByFirstName = (event) => {
+  const sortByFirstName = () => {
     let sortedEmployees = employeeState.map(employee => employee)
       .sort((a, b) => a.firstName.localeCompare(b.firstName));
     setEmployeeState(sortedEmployees);
